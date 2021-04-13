@@ -1,0 +1,59 @@
+---
+title: "Imputation"
+description: |
+  Vignette demonstrating imputation of low resolution hla typing to high resolution.
+output:
+  rmarkdown::html_vignette: default
+vignette: |
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Imputation}
+  %\usepackage[utf8]{inputenc}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r libraries, message=FALSE}
+library(readr)
+library(tidyverse)
+library(hlaR)
+```
+
+## Vignette Aims
+
+Analysis of historic hla typing data is limited by low to moderate resolution. Use of high resolution typing is required to calculate eplet mismatch between recipient and donor. The National Marrow Donor Program provides a tool (haplostats.org)  with which low resolution data can be imputed to high resolution. The user enters the patient's low resolution hla typing information, and the website outputs the high resolution haplotypes matching that patient's information, ranked in order of frequency within an ethnicity population. The function `ImputeHaplo` allows imputation to be performed on many patients simultaneously. 
+
+## Load Test Data Set
+
+A sample dataset derived from a cohort of 200 kidney transplant recipients is provided to demonstrate the `ImputeHaplo` function.    The data consists of donor and recipient cleaned HLA typing data for HLA Class I (A, B, C) and HLA Class II (DRB1, DRB3/4/5).
+This data has already been cleaned using the `CleanAllele` function. 
+
+```{r}
+tx_cohort_clean <- read.csv(system.file("extdata/example", "Haplotype_test.csv", package = "hlaR"))
+```
+
+## Generate List of Possible Haplotypes and Sort Most likely Pairs
+Use the `ImputeHaplo` Function to generate a list of high resolution haplotypes that fit the patient's low resolution data. The haplotypes are sorted by a count measure, "cnt" that represents the number of high resolution antigens that match the low resolution input data. Haplotypes with the same count are arranged by descending population frequency. The function then considers all possible pairs of haplotypes. For each pair of haplotypes, the overall count of low resolution input antigens matched by the imputed high resolution data is calculated. Results are then arranged by descending count, and pairs with the same count are arranged by descending population frequency. 
+
+```{r, echo=FALSE, results='hide', fig.keep='all'}
+haplotbl<- ImputeHaplo(tx_cohort_clean)
+```
+
+## Impute high-resolution data
+The highest ranked pair of haplotypes is used to impute high resolution HLA alleles for the input data.
+```{r}
+# imputehires <- slice (haplotbl)
+#write_csv(imputehires, "tx_cohort_imputed")
+```
+
+## Notes: 
+1. Lookup table of haplotype frequencies sourced from haplostats.org
+2. Imputation is limited to the loci provided by the NMDP high-resolution data (specified in sample imputation data)
+    
+
+
+

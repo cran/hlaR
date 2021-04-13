@@ -1,0 +1,13 @@
+pair_id,rowid,race_rcpt,race_don,donor_type,recipient_a1,recipient_a2,recipient_b1,recipient_b2,recipient_c1,recipient_c2,recipient_bw1,recipient_bw2,recipient_drb11,recipient_drb12,recipient_drb31,recipient_drb32,recipient_drb41,recipient_drb42,recipient_drb51,recipient_drb52,recipient_dqb11,recipient_dqb12,recipient_dqa11,recipient_dqa12,recipient_dpa11,recipient_dpa12,recipient_dpb11,recipient_dpb12,donor_a1,donor_a2,donor_b1,donor_b2,donor_c1,donor_c2,donor_bw1,donor_bw2,donor_drb11,donor_drb12,donor_drb31,donor_drb32,donor_drb41,donor_drb42,donor_drb51,donor_drb52,donor_dqb11,donor_dqb12,donor_dqa11,donor_dqa12,donor_dpa11,donor_dpa12,donor_dpb11,donor_dpb12
+101,1,cau,cau,deceased,*2,3,7,49,7,7,4,6,11,15,,,,,,,3,6,,,,,,,1,2,8,15,3,7,6,6,3,4,1,1,10,10,,,20,3,,,,,,
+103,2,afa,cau,deceased,2,33,15,57,2,8,4,6,3,4,,,,,,,3,40,,,,,,,2,3,7,8,7,7,6,6,4,4,,,10,1,,,3,3,,,,,,
+112,3,his,afa,deceased,2,24{BW4},7,45,7,16,6,6,10,10,,,,,,,50,50,,,,,,,2,24,15,35,2,4,6,6,3,11,20,20,,,,,20,3,,,,,,
+134,4,cau,cau,deceased,2,2,44,50,5,6,4,6,40,7,,,,,,,2,3,,,,,,,2,2,40,48,2,8,6,6,4,7,,,1,1,,,3:04,3,2:01,3:01,,,2:01,13:01
+203,5,afa,cau,deceased,2,68,45,56,1,16,6,6,10,13,,,,,,,50,60,,,,,,,1,68,40,44,3,7,4,6,11,13,,,,,,,3,6,,,,,,
+211,6,afa,afa,deceased,2,30,8,57,6,7,4,6,3,13,,,,,,,20,2,,,,,,,2,2,13,45,8,16,4,6,8,13,1,1,,,,,40,6,,,,,,
+215,7,NA,NA,NA,2,33,44,XX,3,6,4,6,3,11,,,,,,,20,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+216,8,afa,cau,deceased,2:02,26:08:00,35,58:02:00,7,6,6,4,3:01,12,,,,,,,2,5:01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+278,9,afa,afa,deceased,2,68:02:00,45,51:02:00,16:01,16:01,6,4,4:05,9:01,,,,,,,2,3:02,,,,,,,34,66,42,45,16,17,6,6,3,8,1,1,,,,,3:19,4,4:01,4:01,,,1:01,1:01
+298,10,afa,his,deceased,23,33,13,14:03,8:02,8:04,4,6,3:02,7:01,,,,,,,2,4:02,,,,,,,23,33,14,44,4,8,6,4,3,7,2,2,1,1,,,2,2,2:01,5:01,1,3,4:01,4:01
+300,11,his,cau,deceased,32,1,15,8,2,7,6,6,12,4,1,1,1,1,,,5,3:02,1,3,1:03,1:03,,,,,,,,,,,,,,,,,,,,,,,,,,
+301,12,api,cau,living,2,*08,18,40,7,15,6,6,11g,12,,,,,,,3,3,5,6:01,,,,,,,,,,,,,,,,,,,,,,,,,,,,
