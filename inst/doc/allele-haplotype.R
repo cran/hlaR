@@ -12,7 +12,7 @@ library(hlaR)
 ## -----------------------------------------------------------------------------
 tx_cohort_clean <- read.csv(system.file("extdata/example", "Haplotype_test.csv", package = "hlaR"))
 
-## ---- echo=FALSE, results='hide', fig.keep='all'------------------------------
+## ---- results='hide', fig.keep='all'------------------------------------------
 haplotbl<- ImputeHaplo(tx_cohort_clean)
 
 ## -----------------------------------------------------------------------------

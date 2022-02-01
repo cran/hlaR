@@ -26,7 +26,7 @@
 #' dat<-read.csv(system.file("extdata/example","MHC_I_test.csv",package="hlaR"),sep=",",header=TRUE)
 #' re <- CalEpletMHCI(dat_in = dat, ver = 3)
 
-CalEpletMHCI <- function(dat_in, ver = 3) {
+CalEpletMHCI <- function(dat_in, ver = 2) {
   #* step 0: check if recipient and donor are paired *#
   num_rcpt <- length(dat_in$subject_type[dat_in$subject_type %in% c("recipient", "recip", "rcpt", "r")])
   num_don  <- length(dat_in$subject_type[dat_in$subject_type %in% c("donor", "don", "dn", "d")])
@@ -48,10 +48,10 @@ CalEpletMHCI <- function(dat_in, ver = 3) {
     setNames(paste(tbl_raw_eplet$type, tbl_raw_eplet$index, sep = "_" )) %>%
     rownames_to_column(var = "locus") %>%
     mutate(locus = ifelse(str_detect(locus, "\\*"), sub("\\*.*", "", locus), locus)) %>%
-    dplyr::filter(!locus %in% c("index", "type") ) %>%
+    filter(!locus %in% c("index", "type") ) %>%
     distinct() %>%
     reshape2::melt(id.vars = "locus") %>%
-    dplyr::filter(value != "" ) %>%
+    filter(value != "" ) %>%
     distinct() %>%
     mutate(index = as.numeric(sub(".*\\_", "", variable)),
            type = sub("\\_.*", "", variable)) %>%
@@ -218,11 +218,12 @@ CalEpletMHCI <- function(dat_in, ver = 3) {
   # add hla to the result_single table
   re_s <- re_s %>%
     left_join(., don_allele, by =c("pair_id", "gene") ) %>%
-    select(pair_id, subject, hla, mm_eplets, mm_cnt) %>%
+    select(pair_id, subject, hla, gene, mm_eplets, mm_cnt) %>%
     left_join(., id_match, by = "pair_id") %>%
     select(-pair_id) %>%
-    rename(pair_id = pair_id_ori) %>%
-    # filter(mm_cnt != 0) %>% # keep mismatch eplets only
+    rename(pair_id = pair_id_ori,
+           haplotype_id = gene) %>%
+    mutate(haplotype_id = gsub("[a-zA-Z]", "", haplotype_id)) %>%
     select(pair_id, everything())
   #* end of step 7 *#
 

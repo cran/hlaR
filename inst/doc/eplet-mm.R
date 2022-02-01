@@ -5,8 +5,6 @@ knitr::opts_chunk$set(
 )
 
 ## ---- message = FALSE---------------------------------------------------------
-# library(devtools)
-# install_github("LarsenLab/hlaR")
 library(hlaR)
 library(tidyverse)
 library(dplyr)
