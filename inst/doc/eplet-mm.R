@@ -22,6 +22,7 @@ dat_mhc2 <-  read.csv(system.file("extdata/example", "MHC_II_test.csv", package 
 re_mhc2 <- CalEpletMHCII(dat_mhc2)
 re_mhc2_single <- re_mhc2$single_detail
 re_mhc2_overall <- re_mhc2$overall_count
+re_mhc2_drdq_risk <- re_mhc2$dqdr_risk
 
 ## ----visualize mm-------------------------------------------------------------
 hist(re_mhc1_overall$mm_cnt_tt)
