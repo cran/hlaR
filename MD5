@@ -1,4 +1,4 @@
-12c8e73479b0645e643291e5fa832d54 *DESCRIPTION
+59f97de5d0fd65014cacf85a5a1b0bd0 *DESCRIPTION
 92919cc359a4b89e26e75a9bb30271f3 *LICENSE
 184c819fd3dac8d85cc7b7105df82547 *NAMESPACE
 abd8a0bef9c91c18769031488e3f3fb4 *R/allele-clean.R
@@ -14,10 +14,10 @@ c7ad5734bdd97bd1d5beaf766c4db8f6 *R/globals.R
 efc29fd0b1a07e071a3990156a0da35c *build/vignette.rds
 11767a6060f1b765e8e7505aae02a6fe *inst/doc/allele-haplotype.R
 e3e2968d7df79a4d13a5a8f5895338f0 *inst/doc/allele-haplotype.Rmd
-eb049b0672e248de895308f2b3009187 *inst/doc/allele-haplotype.html
+04800122c8e5e609a66b6b7a8e3287db *inst/doc/allele-haplotype.html
 eea2ac13ee88309fb60afc35c500f7eb *inst/doc/eplet-mm.R
 d45866e81865f5245c2a5f6152125d5d *inst/doc/eplet-mm.Rmd
-e311a6891a97f9706af2e59b13cd7493 *inst/doc/eplet-mm.html
+2f529162cbf193f93d8a191c8b95a282 *inst/doc/eplet-mm.html
 27b2eb8b589733bda535a81ccc72f24a *inst/extdata/example/HLA_Clean_test.csv
 a1fc81df1e3c094716c4a92a7d3bb0e1 *inst/extdata/example/HLA_MisMatch_count_test.csv
 735b2ee3170f8539d0e49f9f83ee8f38 *inst/extdata/example/HLA_MisMatch_test.csv
