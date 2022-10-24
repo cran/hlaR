@@ -1,4 +1,4 @@
-59f97de5d0fd65014cacf85a5a1b0bd0 *DESCRIPTION
+0d447cc7b45c6edd00b555eb9dd35971 *DESCRIPTION
 92919cc359a4b89e26e75a9bb30271f3 *LICENSE
 184c819fd3dac8d85cc7b7105df82547 *NAMESPACE
 abd8a0bef9c91c18769031488e3f3fb4 *R/allele-clean.R
@@ -8,16 +8,16 @@ abd8a0bef9c91c18769031488e3f3fb4 *R/allele-clean.R
 af10e60f8ceb54b9d6e5c3af280c512d *R/allele-mism-freq.R
 c08949955d53db8827e7531fc9ae0566 *R/allele-topn.R
 834a1c8e74e0f46891fd294b5a2f1034 *R/eplet-MHC-I.R
-cc3d0e4aec393c0af49d4595d7c14b11 *R/eplet-MHC-II.R
+4c3dc5a69a1c424bba60cf6d76b33bba *R/eplet-MHC-II.R
 c7ad5734bdd97bd1d5beaf766c4db8f6 *R/globals.R
-590cb6a77cb6b23540539b1256a3eb8b *R/utils.R
+3169bf5edf660ed4b14cdeb83ef39fc7 *R/utils.R
 efc29fd0b1a07e071a3990156a0da35c *build/vignette.rds
 11767a6060f1b765e8e7505aae02a6fe *inst/doc/allele-haplotype.R
 e3e2968d7df79a4d13a5a8f5895338f0 *inst/doc/allele-haplotype.Rmd
-04800122c8e5e609a66b6b7a8e3287db *inst/doc/allele-haplotype.html
+a8a66a48bed7283c87ea2a166acad0c6 *inst/doc/allele-haplotype.html
 eea2ac13ee88309fb60afc35c500f7eb *inst/doc/eplet-mm.R
 d45866e81865f5245c2a5f6152125d5d *inst/doc/eplet-mm.Rmd
-2f529162cbf193f93d8a191c8b95a282 *inst/doc/eplet-mm.html
+fba8792c13de0437c40983f5d9fe0f06 *inst/doc/eplet-mm.html
 27b2eb8b589733bda535a81ccc72f24a *inst/extdata/example/HLA_Clean_test.csv
 a1fc81df1e3c094716c4a92a7d3bb0e1 *inst/extdata/example/HLA_MisMatch_count_test.csv
 735b2ee3170f8539d0e49f9f83ee8f38 *inst/extdata/example/HLA_MisMatch_test.csv
