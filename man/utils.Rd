@@ -3,13 +3,13 @@
 \name{utils}
 \alias{utils}
 \alias{GenerateLookup}
-\alias{CalRiskScr}
+\alias{CalRiskScore}
 \alias{FuncForCompHaplo}
 \title{Basic functions}
 \usage{
 GenerateLookup(lkup_in, locus_in)
 
-CalRiskScr(dat_scr)
+CalRiskScore(dat_in)
 
 FuncForCompHaplo(tbl_raw, tbl_in)
 }
@@ -17,9 +17,9 @@ FuncForCompHaplo(tbl_raw, tbl_in)
 \item{lkup_in}{data table}
 
 \item{locus_in}{string
-CalRiskScr() called in CalEpletMHCII()}
+CalRiskScore() calculate DR DQ risk score, it's called in CalEpletMHCII()}
 
-\item{dat_scr}{dataframe
+\item{dat_in}{dataframe
 FuncForCompHaplo() called in ImputeHaplo()}
 
 \item{tbl_raw}{data frame}

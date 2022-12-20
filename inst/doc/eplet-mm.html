@@ -400,7 +400,7 @@ single and overall outputs.</h5>
 <h5>Step 3: Calculate MHCII mismatch and DRDQ risk score, pull
 information from result using single and overall outputs.</h5>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use the testing data in the library</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>dat_mhc2 <span class="ot">&lt;-</span>  <span class="fu">read.csv</span>(<span class="fu">system.file</span>(<span class="st">&quot;extdata/example&quot;</span>, <span class="st">&quot;MHC_II_test.csv&quot;</span>, <span class="at">package =</span> <span class="st">&quot;hlaR&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>dat_mhc2 <span class="ot">&lt;-</span>  <span class="fu">read.csv</span>(<span class="fu">system.file</span>(<span class="st">&quot;extdata/example&quot;</span>, <span class="st">&quot;MHC_II_test.csv&quot;</span>, <span class="at">package =</span> <span class="st">&quot;hlaR&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>re_mhc2 <span class="ot">&lt;-</span> <span class="fu">CalEpletMHCII</span>(dat_mhc2)</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning in CalEpletMHCII(dat_mhc2): DQB1*02:06 is not found in the refernce table. Please check!</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; DPB1*67:01 is not found in the refernce table. Please check!</span></span>
@@ -423,11 +423,9 @@ information from result using single and overall outputs.</h5>
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning in CalEpletMHCII(dat_mhc2): DPB1*104:01 is not found in the refernce table. Please check!</span></span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; DPB1*08:01 is not found in the refernce table. Please check!</span></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning in CalEpletMHCII(dat_mhc2): DPB1*105:01 is not found in the refernce table. Please check!</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning in CalRiskScr(.): DR and DQ risk score calculation require input of both</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; DR and DQ. No score is calculated at this time.</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>re_mhc2_single <span class="ot">&lt;-</span> re_mhc2<span class="sc">$</span>single_detail</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>re_mhc2_overall <span class="ot">&lt;-</span> re_mhc2<span class="sc">$</span>overall_count</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>re_mhc2_drdq_risk <span class="ot">&lt;-</span> re_mhc2<span class="sc">$</span>dqdr_risk</span></code></pre></div>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>re_mhc2_single <span class="ot">&lt;-</span> re_mhc2<span class="sc">$</span>single_detail</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>re_mhc2_overall <span class="ot">&lt;-</span> re_mhc2<span class="sc">$</span>overall_count</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>re_mhc2_drdq_risk <span class="ot">&lt;-</span> re_mhc2<span class="sc">$</span>dqdr_risk</span></code></pre></div>
 </div>
 <div id="step-4-use-visuals-to-examine-the-data." class="section level5">
 <h5>Step 4: Use visuals to examine the data.</h5>
